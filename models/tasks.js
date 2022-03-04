@@ -20,6 +20,14 @@ class Tasks {
     this.list = {};
   }
 
+  deleteTask(id = '') {
+
+    if (this.list[id]) {
+      delete this.list[id]
+    }
+    
+  }
+
   upTask(tasks = []) {
     tasks.forEach((task) => {
       this.list[task.id] = task;
@@ -51,7 +59,7 @@ class Tasks {
       if (completeds) {
         if (completed) {
           count += 1;
-          console.log(`${idx} ${desc} :: ${completed}`);
+          console.log(`${idx} ${desc} :: ${completed.green}`);
         }
       } else {
         if (!completed) {
@@ -60,6 +68,24 @@ class Tasks {
         }
       }
     });
+  }
+  toggleCompleted(ids = []) {
+    
+    ids.forEach(id => {
+      const task = this.list[id];
+      if (!task.completed) {
+        task.completed = new Date().toISOString();
+      }
+    });
+
+    this.listArr.forEach(task => {
+// Si no existe task.id, se limpia
+      if (!ids.includes(task.id)) {
+        this.list[task.id].completed = null;
+      }
+
+    })
+
   }
 }
 
