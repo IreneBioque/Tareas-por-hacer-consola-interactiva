@@ -13,15 +13,15 @@ const menuOptions = [
       },
       {
         value: "2",
-        name: `${"2.".green} Listar tareas`,
+        name: `${"2.".green} Lista de tareas`,
       },
       {
         value: "3",
-        name: `${"3.".green} Listar tareas completadas`,
+        name: `${"3.".green} Lista de tareas completadas`,
       },
       {
         value: "4",
-        name: `${"4.".green} Listar tareas pendientes`,
+        name: `${"4.".green} Lista de tareas pendientes`,
       },
       {
         value: "5",
