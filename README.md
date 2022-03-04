@@ -73,4 +73,4 @@ This project is licensed under the MIT License MIT License see the [LICENSE](LIC
 ## Gracias 🎁 / Thanks 🎁
 
 - Gracias a todo el mundo que me acompaña en este camino🍺
-- Thanks to everyone who keeps playing my Wordle and accompanies me on this path🍺.
+- Thank you to everyone who accompanies me on this journey🍺.
