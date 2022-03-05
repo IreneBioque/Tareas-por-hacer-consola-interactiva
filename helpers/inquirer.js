@@ -87,7 +87,7 @@ const deletelistTask = async (tasks = []) => {
       name: `${idx} ${task.desc}`,
     };
   });
-// para añadir el 1º 
+  // para añadir el 1º
   choices.unshift({
     value: "0",
     name: `${"0".green} Cancelar`,
@@ -123,7 +123,7 @@ const seeListCheckList = async (tasks = []) => {
     return {
       value: task.id,
       name: `${idx} ${task.desc}`,
-      checked: (task.completed) ? true : false,
+      checked: task.completed ? true : false,
     };
   });
 
@@ -138,7 +138,6 @@ const seeListCheckList = async (tasks = []) => {
   const { ids } = await inquirer.prompt(questions);
   return ids;
 };
-
 
 module.exports = {
   inquirerMenu,

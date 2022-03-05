@@ -8,17 +8,15 @@ const saveDB = (data) => {
 };
 
 const readDB = () => {
+  if (!fs.existsSync(registry)) {
+    return null;
+  }
 
-    if (!fs.existsSync(registry)) {
-        return null;
-    }
+  const info = fs.readFileSync(registry, { encoding: "utf-8" });
+  const data = JSON.parse(info);
 
-    const info = fs.readFileSync(registry, { encoding: 'utf-8' })
-    const data = JSON.parse(info);
-
-    return data;
-
-}
+  return data;
+};
 
 module.exports = {
   saveDB,
