@@ -6,7 +6,6 @@ const registry = "./db/data.json";
 const saveDB = (data) => {
   fs.writeFileSync(registry, JSON.stringify(data));
 };
-a
 const readDB = () => {
   if (!fs.existsSync(registry)) {
     return null;
